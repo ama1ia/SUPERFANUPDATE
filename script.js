@@ -63,12 +63,15 @@ function twelfthImage() {
 
 //The amount of places the user has visited is counted at the top right of the screen
 		
-var a = document.getElementById("a")
+var a = document.getElementById("a");
 var b = 0;
 
 function checkButton(){
 	if (b == 0){
-		yellow.disabled = true;
+		disableYellow();
+	}
+	else{
+		yellow.disabled = false;
 		blue.disabled = false;
 	}
 }
@@ -92,16 +95,26 @@ function subtractOne(){
 	
 }
 
+var body = document.getElementById("body");
+var pic = document.getElementById("pic");
 function checkEquivalence(){
 	if (b == 12){
-		document.getElementById("body").classList.add("airplane");
-		flyForward();
-		//document.getElementById("body").classList.add("fly-forward");
-		//document.getElementById("body").classList.innerHTML = "You're Done!";
-		//document.getElementById("body").classList.add("center-vertical");
-		//document.getElementById("body").classList.add("contain-image");
+		disappearContent();
+		pic.classList.add("airplane");
+		addText();
+		console.log("Success");
 	}
 }	
+
+function disappearContent(){
+	document.getElementById("top").style.display = "none";
+	document.getElementById("bottom").style.display = "none";
+}
+
+function addText(){
+	body.classList.add("h1");
+	body.innerHTML = "You're Done!";
+}
 
 var blue = document.getElementById("yes");
 var yellow = document.getElementById("no");
