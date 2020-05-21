@@ -66,18 +66,6 @@ function twelfthImage() {
 var a = document.getElementById("a");
 var b = 0;
 
-function checkButton(){
-	if (b == 0){
-		disableYellow();
-		console.log("blue disabled");
-	}
-	else{
-		yellow.disabled = false;
-		blue.disabled = false;
-		console.log("not disabled");
-	}
-}
-		
 console.log(b);		
 
 function addOne(){
@@ -97,6 +85,18 @@ function subtractOne(){
 	
 }
 
+function checkButton(){
+	if (b == 0){
+		disableYellow();
+		console.log("blue disabled");
+	}
+	else{
+		yellow.disabled = false;
+		blue.disabled = false;
+		console.log("not disabled");
+	}
+}
+		
 var body = document.getElementById("body");
 var pic = document.getElementById("pic");
 function checkEquivalence(){
