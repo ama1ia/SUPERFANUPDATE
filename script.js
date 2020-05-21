@@ -69,10 +69,12 @@ var b = 0;
 function checkButton(){
 	if (b == 0){
 		disableYellow();
+		console.log("blue disabled");
 	}
 	else{
 		yellow.disabled = false;
 		blue.disabled = false;
+		console.log("not disabled");
 	}
 }
 		
